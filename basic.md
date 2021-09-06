@@ -23,8 +23,8 @@ Does character/string matching
 ## Helpful `find` command
 * `find <dir-location> -name <dir/file name> -type <dir/file>` - Returns file or directory locations matching the value specified for the `-name` flag.
 * Examples:
- * `find /home/ -name "*.sh" -type f`
- * `find /home/ -maxdepth 1 -name "*.sh" -type f`
- * `find /home/ -name "*.sh" -type f -mtime [+50|50|-50]` -> 50 represents days and mtime is modified time
- * `find /home/ -name "*.sh" -type f -atime -3` -> atime is accessesd time
- * `find ~ -type f -size 10G`
+  * `find /home/ -name "*.sh" -type f`
+  * `find /home/ -maxdepth 1 -name "*.sh" -type f`
+  * `find /home/ -name "*.sh" -type f -mtime [+50|50|-50]` -> 50 represents days and mtime is modified time
+  * `find /home/ -name "*.sh" -type f -atime -3` -> atime is accessesd time
+  * `find ~ -type f -size 10G`
