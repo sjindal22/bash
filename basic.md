@@ -28,3 +28,19 @@ Does character/string matching
   * `find /home/ -name "*.sh" -type f -mtime [+50|50|-50]` -> 50 represents days and mtime is modified time
   * `find /home/ -name "*.sh" -type f -atime -3` -> atime is accessesd time
   * `find ~ -type f -size 10G`
+
+
+## Invoking the script
+* When you type `./test-script.sh`, you are basically telling shell to use the current directory path to invoke the script. 
+* To add the current directory path to the `$PATH`, follow the steps below:
+  * export PATH = $PATH:$(pwd)
+  * This time just run `test-script.sh`.
+
+## Redirects and pipes
+
+* `ls 1>output.txt` -> redirect standard output to output.txt
+* `ls % 2>error.txt` -> redirect standard error to error.txt
+* `ls $ &>both.txt` -> redirects standard output and error to both.txt
+* `ls % 1>output.txt 2>error.txt` -> edirect standard output to output.txt and standard output and error to error.txt 
+* `ls % 1>output.txt 2>&1` -> standard error to standard output and standard output to output.txt.
+* `cat file1.txt | head -5 | tail -3 | wc -l` -> returns bottom 3 lines from the top 5 lines and counts the number of lines returned.
